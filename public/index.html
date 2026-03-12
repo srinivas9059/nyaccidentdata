@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NYPD Motor Collisions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="d3.v4.js"></script>
+    <!-- Add these lines to include Bootstrap CSS and JS files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <h1> New York City Police Department Motor Collisions </h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="problems.html">Problems and graphs</a>
+        <a href="maps.html">Maps</a>
+        <a href="solutions.html">Solutions</a>
+        <a class="menu-icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+</nav>
+<!-- Add this code inside your <body> section -->
+    <style>
+        .carousel-caption {
+            position: absolute;
+            top: 0;
+            bottom: 1;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align:start;
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+        }
+    
+        .carousel-caption h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption p {
+            color: #fff; /* Text color */
+            margin: 10px;
+        }
+    </style>
+
+    <div id="nyCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/newyork1.jpg" alt="First slide">
+                  <div class="carousel-caption">
+
+                  
+                <h2>
+                    About our project 
+                    </h2>
+                    <div class="Intro">
+                    <p>  In our project, we explore and analyze the Motor Vehicle Collisions dataset provided by
+                         the New York Police Department (NYPD). This comprehensive dataset comprises 2.03 million rows, 
+                         each representing a motor vehicle collision, and includes 29 columns such as CRASH DATE, CRASH TIME, 
+                         BOROUGH, ZIP CODE, LATITUDE, LONGITUDE, and various other details about the incidents. 
+                         The primary aim of the project is to uncover insights and patterns within the data. 
+                         I address key problem statements, such as identifying locations with the highest and lowest number of collisions, 
+                         determining areas where the most and least fatalities and injuries occur, and understanding the types of vehicles
+                          and contributing factors involved in collisions. Additionally, the project delves into time frames when crashes
+                           are most and least likely to happen. Through data visualization, particularly on a map of New York City, 
+                           I aim to provide a clear representation of the spatial distribution of collisions, offering a visual perspective
+                            on the dataset's patterns and trends. The analysis of this Motor Vehicle Collisions dataset serves to enhance our
+                             understanding of traffic incidents in NYC, contributing valuable insights for future safety measures and urban 
+                             planning.</p>
+                
+                        </div>
+            </div>
+        </div>  
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/newyork2.jpg" alt="Second slide">
+                <div class="carousel-caption">
+
+                  
+                    <h3>
+                        Project Aim
+                        </h3>
+                        <div class="Aim">
+                        <p> The primary aim of this project is to conduct a comprehensive analysis of the Motor Vehicle 
+                            Collisions dataset provided by the New York Police Department (NYPD).o	We have collected a dataset 
+                            of motor vehicle collisions occurred in New York City. The detail description of the dataset is given below 
+                            We have implemented a python script for time series forecasting using the Seasonal Auto Regressive Integrated 
+                            Moving Average (SARIMA) model. 
+                        </p>
+                            
+                            </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/newyork3.jpg" alt="Second slide">
+                <div class="carousel-caption">
+
+                  
+                    <h4>
+                        making of website and technology used 
+                                            </h4>
+                        <div class="making">
+
+                        
+                        <p> We have collected a dataset of motor vehicle collisions occurred in New York City. The detail description of the dataset is given below.<br>
+                            After downloading the dataset, we imported this data into Google Colab (Python Notebook) and implemented some pre-processing operations 
+                            on the dataset.<br>
+                            Then, this new dataset is imported into MySQL Database Server.<br>
+                            Node.js was used to run the back-end server.<br>
+                            HTML, CSS, and JavaScript was used for the front-end.<br>
+                            Implemented SARIMA (Seasonal Auto Regressive Integrated Moving Average) model for time series analysis and forecasting. This can be used to predict future accident counts.
+                            Hosted our website on Google Cloud<br>
+                            </p>
+                    
+                            </div>
+                </div>
+            </div>
+            <!-- Add more carousel items with different images as needed -->
+        </div>
+        <a class="carousel-control-prev" href="#nyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#nyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+    
+
+   </div>
+   <footer>
+    <p>
+        <a href="contact.html">Contact Us</a>
+        &copy; New York City Police Department Motor Collisions
+    </p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

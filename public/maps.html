@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPD Motor Collisions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>New York City Police Department Motor Collisions</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="problems.html">Problems and graphs</a>
+        <a href="maps.html">Maps</a>
+        <a href="solutions.html">Solutions</a>
+        
+        <a class="menu-icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+    </nav>
+    
+    <section>
+        <h2>MAPS</h2>
+        <p>Visualizing the dataset of NYC Collions on Google Maps (takes a couple of minutes to load)</p>
+    </section>
+
+    <div id="map" style="height: 500px;"></div>
+
+    <footer>
+        <p>
+            <a href="contact.html">Contact Us</a>
+            &copy; New York City Police Department Motor Collisions
+        </p>
+    </footer>
+
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.7128, lng: -74.0060 }, // Coordinates for New York City
+                zoom: 10
+            });
+
+            // Object to store the count of occurrences for each location
+            var locationCount = {};
+
+            // Fetch the JSON file
+            fetch('https://elite-flow-407105.ue.r.appspot.com/getLatLong')
+                .then(response => response.json())
+                .then(data => {
+                    var markers = [];
+
+                    // Loop through JSON data
+                    data.forEach(item => {
+                        var lat = parseFloat(item.Latitude);
+                        var lng = parseFloat(item.Longitude);
+
+                        // Check if lat and lng are valid numbers
+                        if (!isNaN(lat) && !isNaN(lng)) {
+                            var location = lat + ',' + lng;
+
+                            // Increment the count for this location
+                            locationCount[location] = (locationCount[location] || 0) + 1;
+
+                            var intensity = locationCount[location];
+
+                            // Color logic based on intensity
+                            var color = 'green'; // Default color
+                            if (intensity > 100000) {
+                                color = 'red';
+                            } else if (intensity > 50000) {
+                                color = 'orange';
+                            } else if (intensity > 10000) {
+                                color = 'pink';
+                            }
+
+                            markers.push(new google.maps.Marker({
+                                position: { lat: lat, lng: lng },
+                                icon: {
+                                    path: google.maps.SymbolPath.CIRCLE,
+                                    scale: Math.sqrt(intensity),
+                                    fillColor: color,
+                                    fillOpacity: 0.8,
+                                    strokeWeight: 1
+                                }
+                            }));
+                        }
+                    });
+
+                    // Apply clustering to the markers
+                    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXhM90JBCnk_WBBN6TIDVGbzm_L-YdCjk&callback=initMap"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"></script>
+</body>
+</html>

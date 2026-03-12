@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPD Motor Collisions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="d3.v4.js"></script>
+</head>
+<body>
+    <header>
+        <h1>New York City Police Department Motor Collisions</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="problems.html">Problems and graphs</a>
+        <a href="maps.html">Maps</a>
+        <a href="solutions.html">Solutions</a>
+      
+        <a class="menu-icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+    </nav>
+    
+<section class="blue"><h2>dataset</h1>
+   
+    <section class="center" p  >The dataset used in this project comprises the following columns:
+        
+        <ul>
+            <li>Crash Date: Date of the accident.</li>
+            <li>Crash Time: Time of the accident.</li>
+            <li>Borough: Borough where the accident occurred.</li>
+            <li>Zip Code: Zip code of the accident location.</li>
+            <li>Latitude: Latitude of the accident location.</li>
+            <li>Longitude: Longitude of the accident location.</li>
+            <li>Location: Coordinates of the accident (Latitude, Longitude).</li>
+            <li>On Street Name: Street where the accident occurred.</li>
+            <li>Cross Street Name: Cross street at the accident location.</li>
+            <li>Off Street Name: Off-street location of the accident.</li>
+            <li>Number of Persons Injured: Count of individuals injured.</li>
+            <li>Number of Persons Killed: Count of individuals killed.</li>
+            <li>Number of Pedestrians Injured: Count of pedestrians injured.</li>
+            <li>Number of Pedestrians Killed: Count of pedestrians killed.</li>
+            <li>Number of Cyclist Injured: Count of cyclists injured.</li>
+            <li>Number of Cyclist Killed: Count of cyclists killed.</li>
+            <li>Number of Motorist Injured: Count of motorists injured.</li>
+            <li>Number of Motorist Killed: Count of motorists killed.</li>
+            <li>Contributing Factor Vehicle 1 to 5: Factors contributing to the accident from vehicles.</li>
+            <li>Collision ID: Unique identifier for the collision.</li>
+            <li>Vehicle Type Code 1 to 5: Type of vehicles involved in the accident.</li>
+        </ul>
+        
+        </p>
+        
+    <div class ="curve"></div></section>
+<section class="red"><h2>Source</h1>
+    <p >The Motor Vehicle Collisions crash table provides comprehensive details on crash events in New York City, 
+        with each row representing a specific incident. The data is sourced from police-reported motor vehicle collisions 
+        and is based on the mandatory completion of the MV104-AN police report form. This form is required for collisions 
+        involving injuries, fatalities, or property damage exceeding $1000. It's important to note that the data is 
+        preliminary and subject to change as MV-104AN forms are amended based on revised crash details. 
+        FORMS allows police officers to electronically enter all MV-104AN data fields using Department devices and stores this information 
+        in the crime data warehouse. This shift has enabled more detailed and comprehensive traffic safety analyses, 
+        aligning with the Citywide traffic safety initiative, Vision Zero, which aims to eliminate traffic fatalities. 
+        The implementation of FORMS represents a crucial step towards achieving Vision Zero's goals by facilitating in-depth 
+        analyses of traffic collision data.
+    <br>
+        sources are :<a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes">data website</a><br>
+        NYPD :<a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95">NYPD website </a>
+    </p>
+    <div class ="curve"></div></section>
+<section class="pink"><h2>patterns</h1>
+    <p class="center" ><h2>Patterns and Key Points</h2>
+
+        
+                <strong>Evolution of Data Collection Systems:</strong>
+                <p>The NYPD's approach to collecting data on motor vehicle collisions has evolved over time.</p>
+                <p>Initially, there was no uniform data collection procedure for traffic safety across precincts.</p>
+           
+                <strong>Focus on Traffic Fatalities:</strong>
+                <p>The overarching goal is to address and reduce traffic fatalities, aligning with the Vision Zero initiative.</p>
+                <p>The emphasis on detailed data collection and analysis is driven by a commitment to improving traffic safety outcomes.</p>
+            
+                <strong>Ongoing Revision of Data:</strong>
+                <p>The acknowledgment that the data is preliminary and subject to change highlights an ongoing commitment to accuracy.</p>
+                <p>MV-104AN forms are amended based on revised crash details, ensuring the most up-to-date information.</p>
+          
+                <strong>Evolution of Data Collection Systems:</strong>
+                
+                    <li>The NYPD's approach to collecting data on motor vehicle collisions has evolved over time.</li>
+                    <li>Initially, there was no uniform data collection procedure for traffic safety across precincts.</li>
+                
+                <strong>Focus on Traffic Fatalities:</strong>
+                
+                    <li>The overarching goal is to address and reduce traffic fatalities, aligning with the Vision Zero initiative.</li>
+                    <li>The emphasis on detailed data collection and analysis is driven by a commitment to improving traffic safety outcomes.</li>
+               
+                <strong>Ongoing Revision of Data:</strong>
+               
+                    <li>The acknowledgment that the data is preliminary and subject to change highlights an ongoing commitment to accuracy.</li>
+                    <li>MV-104AN forms are amended based on revised crash details, ensuring the most up-to-date information.</li>
+                
+        </p>
+    <div class ="curve"></div></section>
+<section class="dark">
+
+
+
+
+
+<footer>
+    <p>
+        <a href="contact.html">Contact Us</a>
+        &copy; New York City Police Department Motor Collisions</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPD Motor Collisions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="d3.v4.js"></script>
+    
+    
+
+</head>
+<body class="problems" >
+    <header>
+        <h1>New York City Police Department Motor Collisions</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="problems.html">Problems and graphs</a>
+        <a href="maps.html">Maps</a>
+        <a href="solutions.html">Solutions</a>
+        
+        <a class="menu-icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+    </nav>
+    
+<section>
+    <h2>problems statements</h2>
+    <p>What is the location (like, Street Name, Latitude and Longitude), where,<br>
+        1. Most and least number collisions have occurred.<br>
+        2. Most and least number of people are killed.<br>
+        3. Most and least number of people are injured.<br>
+    </p>
+    <p>Which vehicle type has involved in,<br>
+        1. Most number of collisions.<br>
+        2. Least number of collisions.<br>
+    </p>
+    <p>What are the most contributing factors for the collisions?</p>
+    <p>What are the time frames when most and least crashes have occurred?</p>
+    <p>Data Visualization – showing the number of collisions on a NYC map.</p>
+</section>
+
+
+<p class="que">Here we Have Some Graphs and charts for interesting facts
+    Which vehicle type has involved in and <br>
+    Most number of collisions done in vehicle 
+    Least number of collisions done in vehicle<br>
+    
+    
+ </p>
+    <section id="visualization"></section>
+
+    <section class="timeline">
+        <p>
+            We have implemented a python script for time series forecasting using the Seasonal Auto Regressive Integrated
+            Moving Average (SARIMA) model. What are the time frames when most and least crashes have occurred? The SARIMA
+            model is a sophisticated time series forecasting method that considers seasonality, trends, and other temporal
+            patterns in the data.This second visualization helps assess the accuracy of the SARIMA model in predicting future 
+            trends.
+        </p>
+        <div class="image-container">
+            <img src="images/timeline.png" alt="timeline">
+            <img src="images/prediction.png" alt="prediction chart">
+        </div>
+    </section>
+    
+    <p></p>
+   
+<footer>
+    <p>
+        <a href="contact.html">Contact Us</a>
+        &copy; New York City Police Department Motor Collisions
+    </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="visualization.js"></script>
+
+</body>
+</html>

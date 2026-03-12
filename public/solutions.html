@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPD Motor Collisions</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/d3-cloud/build/d3.layout.cloud.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>New York City Police Department Motor Collisions</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="problems.html">Problems and graphs</a>
+        <a href="maps.html">Maps</a>
+        <a href="solutions.html">Solutions</a>
+        
+        <a class="menu-icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+    </nav>
+    
+<section>
+    <h2>solutions</h2>
+    <div id="word-cloud-container"></div>
+    <div id="tooltip"></div>
+
+</section>
+<h2>Contributing Factors to Motor Vehicle Collisions</h1>
+
+    <section class="factor">
+        
+
+        <ul>
+            <li><strong>Listening/Using Headphones (16):</strong> While relatively low in count, the use of headphones as a 
+                contributing factor suggests a potential distraction source for drivers.</li>
+
+            <li><strong>Windshield Inadequate (31):</strong> Issues with windshields impacting visibility may contribute to 
+                accidents, emphasizing the importance of proper vehicle maintenance.</li>
+
+            <li><strong>Texting (35):</strong> Despite public awareness campaigns, texting remains a concerning factor, 
+                indicating the ongoing challenge of addressing distracted driving.</li>
+
+            <li><strong>Shoulders Defective/Improper (44):</strong> Improperly maintained shoulders could pose hazards,
+                 calling attention to the need for road infrastructure upkeep.</li>
+
+            <li><strong>Vehicle Vandalism (65):</strong> Instances of vehicle vandalism as a contributing factor may indicate 
+                intentional actions leading to collisions, requiring further investigation.</li>
+
+            <li><strong>Eating or Drinking (67):</strong> The relatively high count suggests that activities like eating or 
+                drinking contribute to a significant number of accidents, highlighting potential distractions.</li>
+
+            <li><strong>Headlights Defective (68):</strong> Defective headlights may play a role in nighttime collisions, 
+                emphasizing the importance of properly functioning vehicle lighting systems.</li>
+
+            <li><strong>Tow Hitch Defective (95):</strong> Issues with tow hitches contributing to collisions point to 
+                potential safety concerns related to towing equipment.</li>
+
+            <li><strong>Tinted Windows (95):</strong> Tinted windows as a contributing factor may relate to visibility
+                 challenges, especially at night or in adverse weather conditions.</li>
+
+            <li><strong>Other Lighting Defects (102):</strong> Various lighting defects contribute to accidents, underscoring 
+                the critical role of proper vehicle lighting for road safety.</li>
+
+            <li><strong>Using On Board Navigation Device (103):</strong> Navigation device usage may impact driver attention, 
+                contributing to collisions.</li>
+
+            <li><strong>Cell Phone (hands-free) (108):</strong> The count suggests a relatively lower impact of hands-free cell 
+                phone usage compared to hand-held devices.</li>
+
+            <li><strong>Cell Phone (hand-Held) (344):</strong> The higher count highlights the significant risk associated with 
+                handheld cell phone usage while driving.</li>
+
+            <li><strong>Reaction to Other Uninvolved Vehicle (425):</strong> Instances of drivers reacting to other uninvolved 
+                vehicles suggest a complex interplay of factors on the road.</li>
+
+            <li><strong>Traffic Control Device Improper/Non-Working (438):</strong> Issues with traffic control devices contributing
+                 to collisions indicate potential challenges in maintaining road infrastructure.</li>
+
+            <li><strong>Accelerator Defective (445):</strong> Accelerator defects point to mechanical issues that can lead to accidents, 
+                emphasizing the importance of vehicle maintenance.</li>
+
+            <li><strong>Lane Marking Improper/Inadequate (493):</strong> Improper lane markings contribute to collisions, underlining the 
+                significance of clear road markings for drivers.</li>
+
+            <li><strong>Driverless/Runaway Vehicle (544):</strong> Collisions involving driverless or runaway vehicles highlight 
+                emerging challenges in the realm of autonomous technology.</li>
+
+            <li><strong>Drugs (illegal) (645):</strong> Illegal drug use as a contributing factor underscores the impact of substance 
+                abuse on road safety.</li>
+
+            <li><strong>Animals Action (739):</strong> Unexpected actions by animals contribute to collisions, requiring drivers
+                 to be vigilant in areas with wildlife.</li>
+
+            <li><strong>Illness (871):</strong> Medical illnesses leading to collisions highlight the importance of addressing
+                health conditions that may affect driving.</li>
+
+            <li><strong>Other Electronic Device (903):</strong> The use of electronic devices other than cell phones contributes to
+                 distractions and collisions.</li>
+
+            <li><strong>Pavement Defective (1159):</strong> Defects in the pavement contribute to collisions,
+                 emphasizing the need for well-maintained road surfaces.</li>
+
+            <li><strong>Tire Failure/Inadequate (1220):</strong> Tire failures contribute to accidents, emphasizing 
+                the importance of regular tire maintenance.</li>
+
+            <li><strong>Steering Failure (1296):</strong> Steering failures highlight potential mechanical issues 
+                that can lead to loss of vehicle control.</li>
+
+            <li><strong>Failure to Keep Right (1478):</strong> Failure to keep right contributes to collisions,
+                 emphasizing the importance of lane discipline.</li>
+
+            <li><strong>Obstruction/Debris (1989):</strong> Collisions involving obstruction or debris highlight the
+                 need for prompt removal of hazards from roadways.</li>
+
+            <li><strong>Glare (2170):</strong> Glare from various sources contributes to collisions, especially in 
+                challenging lighting conditions.</li>
+
+            <li><strong>Fell Asleep (2678):</strong> Fatigue-related collisions underscore the importance of addressing drowsy 
+                driving through awareness and preventive measures.</li>
+
+            <li><strong>Physical Disability (3296):</strong> Collisions involving drivers with physical disabilities highlight 
+                the need for adaptive measures and accessibility considerations.</li>
+
+            <li><strong>Brakes Defective (3435):</strong> Defective brakes contribute to accidents, emphasizing the critical role of proper vehicle maintenance.</li>
+
+
+            <li><strong>Passenger Distraction (3554):</strong> Distractions caused by passengers contribute to collisions, 
+                highlighting the need for focus on the road.</li>
+
+            <li><strong>Outside Car Distraction (3998):</strong> Distractions originating outside the car contribute to collisions, 
+                underscoring the importance of maintaining attention despite external factors.</li>
+
+            <li><strong>Aggressive Driving/Road Rage (4844):</strong> Aggressive driving behaviors contribute significantly to 
+                collisions, emphasizing the importance of promoting calm and responsible driving.</li>
+
+            <li><strong>Prescription Medication (5441):</strong> The use of prescription medication as a contributing factor
+                 highlights the importance of understanding potential side effects on driving ability.</li>
+
+            <li><strong>Pedestrian/Bicyclist/Other Pedestrian Error/Confusion (5539):</strong> Collisions involving pedestrian 
+                or cyclist errors underscore the shared responsibility for road safety.</li>
+
+            <li><strong>Oversized Vehicle (6555):</strong> Collisions involving oversized vehicles highlight challenges related 
+                to the safe operation of larger vehicles on the road.</li>
+
+            <li><strong>View Obstructed/Limited (7299):</strong> Limited visibility contributes to collisions, emphasizing the 
+                need for clear sightlines for drivers.</li>
+
+            <li><strong>Lost Consciousness (7617):</strong> Collisions involving lost consciousness underscore the potential 
+                risks associated with medical emergencies while driving.</li>
+
+            <li><strong>Pavement Slippery (10063):</strong> Slippery pavement conditions contribute to collisions, requiring 
+                caution and adjusted driving behavior in adverse weather.</li>
+
+            <li><strong>Alcohol Involvement (10675):</strong> Alcohol involvement remains a significant factor in collisions,
+                 emphasizing the ongoing challenge of combating impaired driving.</li>
+
+            <li><strong>Fatigued/Drowsy (11966):</strong> Collisions resulting from driver fatigue highlight the importance of 
+                adequate rest and breaks during extended journeys.</li>
+
+            <li><strong>Reaction to Uninvolved Vehicle (13259):</strong> Reactions to uninvolved vehicles contribute to collisions, 
+                suggesting the need for heightened situational awareness.</li>
+
+            <li><strong>Driver Inexperience (15862):</strong> Although comparatively lower in count, driver inexperience stands 
+                out as a noteworthy factor, emphasizing the challenges faced by novice drivers.</li>
+
+            <li><strong>Unsafe Speed (16233):</strong> Unsafe speed remains a prevalent factor, indicating the ongoing need for 
+                enforcing speed limits and promoting responsible driving habits.</li>
+
+            <li><strong>Traffic Control Disregarded (22475):</strong> Disregarding traffic control signals poses a substantial risk, 
+                requiring targeted enforcement and public education.</li>
+
+            <li><strong>Turning Improperly (26102):</strong> Improper turning maneuvers contribute significantly to collisions, 
+                emphasizing the importance of signal use and proper turning techniques.</li>
+
+            <li><strong>Passing Too Closely (27728):</strong> Passing too closely contributes to collisions, underscoring the need 
+                for maintaining safe distances between vehicles.</li>
+
+            <li><strong>Unsafe Lane Changing (28179):</strong> These factors underscore challenges related to lane discipline, necessitating efforts to educate drivers on safe lane-changing practices.</li>
+
+
+            <li><strong>Backing Unsafely (32053):</strong> Improper backing maneuvers contribute significantly to collisions, 
+                emphasizing the need for vigilance while reversing.</li>
+
+            <li><strong>Passing or Lane Usage Improper (35873):</strong> Instances of improper passing or lane usage highlight
+                 the importance of adhering to traffic rules.</li>
+
+            <li><strong>Failure to Yield Right-of-Way (75911):</strong> Failure to yield is a prevalent factor contributing to
+                 collisions, emphasizing the need for awareness and adherence to right-of-way rules.</li>
+
+            <li><strong>Following Too Closely (76557):</strong> Tailgating remains a substantial contributor to collisions, 
+                emphasizing the importance of maintaining a safe following distance.</li>
+
+            <li><strong>Driver Inattention/Distraction (225691):</strong> The overwhelmingly high count underscores the pervasive 
+                impact of driver inattention or distraction on road safety, emphasizing the need for awareness campaigns and
+                 preventive measures.</li>
+        </ul>
+    </section>
+
+<footer>
+    <p>
+        <a href="contact.html">Contact Us</a>
+        &copy; New York City Police Department Motor Collisions
+    </p>
+</footer>
+<script src="script.js"></script>
+<script src="wordcloud.js"></script>
+
+</body>
+</html>
